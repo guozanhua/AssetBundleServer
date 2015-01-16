@@ -11,9 +11,9 @@ var methodOverride = require('method-override');
 var engine = require('./engine');
 
 module.exports = function (app, config) {
-  app.engine('hjs', engine);
+  app.engine('html', engine);
   app.set('views', config.root + '/app/views');
-  app.set('view engine', 'hjs');
+  app.set('view engine', 'html');
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));

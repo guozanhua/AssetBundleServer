@@ -8,14 +8,12 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  var article = new Article({
-    title: 'I Have a Dream',
-    url: 'www.article.com',
-    text: 'I have a dream.'
-  });
 
   Article.find(function (err, articles) {
     if (err) return next(err);
-    res.json({ articles: articles });
+    res.render('index', {
+      title: 'Generator-Express MVC',
+      articles: articles
+    });
   });
 });
