@@ -38,6 +38,7 @@ node_modules
 *.njsproj
 *.sln
 /.ntvs_analysis.dat
+/.ntvs_analysis.dat.tmp
 
 # Build results
 [Dd]ebug/
@@ -53,3 +54,5 @@ bld/
 
 # Roslyn cache directories
 *.ide/
+
+/files/
